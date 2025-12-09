@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galería visual de Dragon Ball Z con aplicación de propiedades CSS">
+    <title>Galería Visual - Dragon Ball Z</title>
+    <link rel="stylesheet" href="punto D/style.css">
+</head>
+<body>
+    <!-- Hero Header con imagen de fondo -->
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title"> Galería Visual Dragon Ball Z</h1>
+            <p class="hero-subtitle">Explorando el poder de CSS: Colores, Gradientes e Imágenes</p>
+            <p class="hero-description">
+                Una demostración completa de propiedades visuales aplicadas a una galería temática
+            </p>
+            <a href="#galeria" class="hero-btn">Explorar Galería ↓</a>
+        </div>
+    </header>
+
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#galeria" class="nav-link">Galería</a>
+            <a href="#heroes" class="nav-link">Héroes</a>
+            <a href="#villanos" class="nav-link">Villanos</a>
+            <a href="#personajes" class="nav-link">Personajes</a>
+        </div>
+    </nav>
+
+    <!-- Sección: Paleta de Colores -->
+    <section class="color-palette">
+        <div class="container">
+            <h2 class="section-title"> Paleta de Colores Oficial</h2>
+            <p class="section-description">
+                Colores inspirados en la energía Saiyajin y las auras de los guerreros
+            </p>
+            <div class="palette-grid">
+                <!-- Color 1: Hexadecimal -->
+                <div class="color-card color-saiyan">
+                    <div class="color-name">Energía Saiyajin</div>
+                    <div class="color-code">#FFD700</div>
+                    <div class="color-method">Hexadecimal</div>
+                </div>
+                
+                <!-- Color 2: Por nombre -->
+                <div class="color-card color-ocean">
+                    <div class="color-name">Poder del Océano</div>
+                    <div class="color-code">royalblue</div>
+                    <div class="color-method">Nombre CSS</div>
+                </div>
+                
+                <!-- Color 3: RGB -->
+                <div class="color-card color-namek">
+                    <div class="color-name">Verde Namek</div>
+                    <div class="color-code">rgb(46, 204, 113)</div>
+                    <div class="color-method">RGB</div>
+                </div>
+                
+                <!-- Color 4: RGBA -->
+                <div class="color-card color-majin">
+                    <div class="color-name">Aura Majin</div>
+                    <div class="color-code">rgba(155, 89, 182, 0.9)</div>
+                    <div class="color-method">RGBA</div>
+                </div>
+                
+                <!-- Color 5: RGB Porcentajes -->
+                <div class="color-card color-kame">
+                    <div class="color-name">Kame Hame Ha</div>
+                    <div class="color-code">rgb(5%, 50%, 95%)</div>
+                    <div class="color-method">RGB %</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería Principal -->
+    <section id="galeria" class="main-gallery">
+        <div class="container">
+            <h2 class="section-title">Galería de Personajes</h2>
+            <p class="section-description">
+                Cada personaje combina diferentes técnicas CSS para crear una experiencia visual única
+            </p>
+            
+            <div class="gallery-grid">
+                <!-- Item 1: Goku Normal -->
+                <article class="gallery-item" style="background-image: url('imagenes/assets/imagenes/goku_normal.webp');">
+                    <div class="item-overlay overlay-1"></div>
+                    <div class="item-content">
+                        <h3>Goku</h3>
+                        <p>El héroe principal de Dragon Ball</p>
+                        <span class="item-tag">Gradiente Lineal</span>
+                    </div>
+                </article>
+                
+                <!-- Item 2: Gohan -->
+                <article class="gallery-item" style="background-image: url('imagenes/assets/imagenes/gohan.webp');">
+                    <div class="item-overlay overlay-2"></div>
+                    <div class="item-content">
+                        <h3>Gohan</h3>
+                        <p>El guerrero místico más poderoso</p>
+                        <span class="item-tag">Overlay RGBA</span>
+                    </div>
+                </article>
+                
+                <!-- Item 3: Bardock -->
+                <article class="gallery-item" style="background-image: url('imagenes/assets/imagenes/Bardock_Artwork.webp');">
+                    <div class="item-overlay overlay-3"></div>
+                    <div class="item-content">
+                        <h3>Bardock</h3>
+                        <p>El padre de Goku, guerrero valiente</p>
+                        <span class="item-tag">Background Cover</span>
+                    </div>
+                </article>
+                
+                <!-- Item 4: Gotenks -->
+                <article class="gallery-item" style="background-image: url('imagenes/assets/imagenes/Gotenks_Artwork.webp');">
+                    <div class="item-overlay overlay-4"></div>
+                    <div class="item-content">
+                        <h3>Gotenks</h3>
+                        <p>Fusión de Goten y Trunks</p>
+                        <span class="item-tag">Gradiente Radial</span>
+                    </div>
+                </article>
+                
+                <!-- Item 5: Freezer -->
+                <article class="gallery-item" style="background-image: url('imagenes/assets/imagenes/Freezer.webp');">
+                    <div class="item-overlay overlay-5"></div>
+                    <div class="item-content">
+                        <h3>Freezer</h3>
+                        <p>El emperador del universo</p>
+                        <span class="item-tag">Position Center</span>
+                    </div>
+                </article>
+                
+                <!-- Item 6: Cell -->
+                <article class="gallery-item" style="background-image: url('imagenes/assets/imagenes/celula.webp');">
+                    <div class="item-overlay overlay-6"></div>
+                    <div class="item-content">
+                        <h3>Cell</h3>
+                        <p>El bio-androide perfecto</p>
+                        <span class="item-tag">Transparencia</span>
+                    </div>
+                </article>
+                
+                <!-- Item 7: Majin Buu -->
+                <article class="gallery-item" style="background-image: url('imagenes/assets/imagenes/BuuGordo_Universo7.webp');">
+                    <div class="item-overlay overlay-7"></div>
+                    <div class="item-content">
+                        <h3>Majin Buu</h3>
+                        <p>El demonio ancestral rosa</p>
+                        <span class="item-tag">Gradiente Múltiple</span>
+                    </div>
+                </article>
+                
+                <!-- Item 8: Beerus -->
+                <article class="gallery-item" style="background-image: url('imagenes/assets/imagenes/Beerus_DBS_Broly_Artwork.webp');">
+                    <div class="item-overlay overlay-8"></div>
+                    <div class="item-content">
+                        <h3>Beerus</h3>
+                        <p>El dios de la destrucción</p>
+                        <span class="item-tag">Overlay Púrpura</span>
+                    </div>
+                </article>
+
+                <!-- Item 9: Android 18 -->
+                <article class="gallery-item" style="background-image: url('imagenes/assets/imagenes/Androide_18_Artwork.webp');">
+                    <div class="item-overlay overlay-9"></div>
+                    <div class="item-content">
+                        <h3>Android 18</h3>
+                        <p>La guerrera cibernética</p>
+                        <span class="item-tag">Background Fixed</span>
+                    </div>
+                </article>
+
+                <!-- Item 10: Android 16 -->
+                <article class="gallery-item" style="background-image: url('imagenes/assets/imagenes/Androide_16.webp');">
+                    <div class="item-overlay overlay-10"></div>
+                    <div class="item-content">
+                        <h3>Android 16</h3>
+                        <p>El androide pacifista</p>
+                        <span class="item-tag">Gradiente Diagonal</span>
+                    </div>
+                </article>
+
+                <!-- Item 11: Android 19 -->
+                <article class="gallery-item" style="background-image: url('imagenes/assets/imagenes/Android19.webp');">
+                    <div class="item-overlay overlay-11"></div>
+                    <div class="item-content">
+                        <h3>Android 19</h3>
+                        <p>El androide absorbe energía</p>
+                        <span class="item-tag">Overlay Rojo</span>
+                    </div>
+                </article>
+
+                <!-- Item 12: Dr. Gero (Android 20) -->
+                <article class="gallery-item" style="background-image: url('imagenes/assets/imagenes/Dr._Gero_nadroide_20.webp');">
+                    <div class="item-overlay overlay-12"></div>
+                    <div class="item-content">
+                        <h3>Dr. Gero</h3>
+                        <p>El científico malvado (Android 20)</p>
+                        <span class="item-tag">Background Size</span>
+                    </div>
+                </article>
+
+                <!-- Item 13: Android 13 -->
+                <article class="gallery-item" style="background-image: url('imagenes/assets/imagenes/Androide13normal.webp');">
+                    <div class="item-overlay overlay-13"></div>
+                    <div class="item-content">
+                        <h3>Android 13</h3>
+                        <p>El androide diseñado para matar a Goku</p>
+                        <span class="item-tag">Gradiente Frío</span>
+                    </div>
+                </article>
+
+                <!-- Item 14: Ginyu -->
+                <article class="gallery-item" style="background-image: url('imagenes/assets/imagenes/ginyu.webp');">
+                    <div class="item-overlay overlay-14"></div>
+                    <div class="item-content">
+                        <h3>Capitán Ginyu</h3>
+                        <p>Líder de las fuerzas especiales</p>
+                        <span class="item-tag">Overlay Púrpura</span>
+                    </div>
+                </article>
+
+                <!-- Item 15: Dodoria -->
+                <article class="gallery-item" style="background-image: url('imagenes/assets/imagenes/dodoria.webp');">
+                    <div class="item-overlay overlay-15"></div>
+                    <div class="item-content">
+                        <h3>Dodoria</h3>
+                        <p>El guerrero élite de Freezer</p>
+                        <span class="item-tag">Gradiente Rosa</span>
+                    </div>
+                </article>
+
+                <!-- Item 16: Babidi -->
+                <article class="gallery-item" style="background-image: url('imagenes/assets/imagenes/Babidi_Artwork.webp');">
+                    <div class="item-overlay overlay-16"></div>
+                    <div class="item-content">
+                        <h3>Babidi</h3>
+                        <p>El hechicero maligno</p>
+                        <span class="item-tag">Background Repeat</span>
+                    </div>
+                </article>
+
+                <!-- Item 17: Dende (Super Hero) -->
+                <article class="gallery-item" style="background-image: url('imagenes/assets/imagenes/Arte_de_Dende_en_Super_Hero.webp');">
+                    <div class="item-overlay overlay-17"></div>
+                    <div class="item-content">
+                        <h3>Dende (Super Hero)</h3>
+                        <p>El guardián de la Tierra</p>
+                        <span class="item-tag">Overlay Verde</span>
+                    </div>
+                </article>
+
+                <!-- Item 18: Dende Artwork -->
+                <article class="gallery-item" style="background-image: url('imagenes/assets/imagenes/Dende_Artwork.webp');">
+                    <div class="item-overlay overlay-18"></div>
+                    <div class="item-content">
+                        <h3>Dende</h3>
+                        <p>El Namekiano sanador</p>
+                        <span class="item-tag">Gradiente Cálido</span>
+                    </div>
+                </article>
+
+                <!-- Item 19: Bulma -->
+                <article class="gallery-item" style="background-image: url('imagenes/assets/imagenes/bulma.webp');">
+                    <div class="item-overlay overlay-19"></div>
+                    <div class="item-content">
+                        <h3>Bulma</h3>
+                        <p>La genio científica</p>
+                        <span class="item-tag">Overlay Azul</span>
+                    </div>
+                </article>
+
+                <!-- Item 20: Chi-Chi -->
+                <article class="gallery-item" style="background-image: url('imagenes/assets/imagenes/ChiChi_DBS.webp');">
+                    <div class="item-overlay overlay-20"></div>
+                    <div class="item-content">
+                        <h3>Chi-Chi</h3>
+                        <p>La esposa de Goku</p>
+                        <span class="item-tag">Gradiente Celestial</span>
+                    </div>
+                </article>
+
+                <!-- Item 21: Yamcha -->
+                <article class="gallery-item" style="background-image: url('imagenes/assets/imagenes/Final_Yamcha.webp');">
+                    <div class="item-overlay overlay-21"></div>
+                    <div class="item-content">
+                        <h3>Yamcha</h3>
+                        <p>El guerrero del desierto</p>
+                        <span class="item-tag">Background Blend</span>
+                    </div>
+                </article>
+
+                <!-- Item 22: Gran Kaio Sama -->
+                <article class="gallery-item" style="background-image: url('imagenes/assets/imagenes/Gran_kaio_sama12.webp');">
+                    <div class="item-overlay overlay-22"></div>
+                    <div class="item-content">
+                        <h3>Gran Kaio Sama</h3>
+                        <p>El maestro supremo</p>
+                        <span class="item-tag">Overlay Místico</span>
+                    </div>
+                </article>
+
+                <!-- Item 23: Dyspo -->
+                <article class="gallery-item" style="background-image: url('imagenes/assets/imagenes/Dispo_render.webp');">
+                    <div class="item-overlay overlay-23"></div>
+                    <div class="item-content">
+                        <h3>Dyspo</h3>
+                        <p>El guerrero de la velocidad</p>
+                        <span class="item-tag">Gradiente Velocidad</span>
+                    </div>
+                </article>
+
+                <!-- Item 24: Dokkan 14 -->
+                <article class="gallery-item" style="background-image: url('imagenes/assets/imagenes/14Dokkan.webp');">
+                    <div class="item-overlay overlay-24"></div>
+                    <div class="item-content">
+                        <h3>Artwork Dokkan 14</h3>
+                        <p>Ilustración especial</p>
+                        <span class="item-tag">Efecto Especial</span>
+                    </div>
+                </article>
+
+                <!-- Item 25: Dokkan 15 -->
+                <article class="gallery-item" style="background-image: url('imagenes/assets/imagenes/15Dokkan.webp');">
+                    <div class="item-overlay overlay-25"></div>
+                    <div class="item-content">
+                        <h3>Artwork Dokkan 15</h3>
+                        <p>Ilustración coleccionable</p>
+                        <span class="item-tag">Overlay Dorado</span>
+                    </div>
+                </article>
+
+                <!-- Item 26: Artwork 17 -->
+                <article class="gallery-item" style="background-image: url('imagenes/assets/imagenes/17_Artwork.webp');">
+                    <div class="item-overlay overlay-26"></div>
+                    <div class="item-content">
+                        <h3>Android 17</h3>
+                        <p>El guardabosques poderoso</p>
+                        <span class="item-tag">Gradiente Natural</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Gradientes Demostrativos -->
+    <section id="heroes" class="gradients-showcase">
+        <div class="container">
+            <h2 class="section-title"> Técnicas de Gradientes</h2>
+            <div class="gradients-grid">
+                <div class="gradient-demo demo-1">
+                    <h3>Kamehameha</h3>
+                    <p>Gradiente azul energético</p>
+                </div>
+                <div class="gradient-demo demo-2">
+                    <h3>Final Flash</h3>
+                    <p>Gradiente amarillo potente</p>
+                </div>
+                <div class="gradient-demo demo-3">
+                    <h3>Special Beam Cannon</h3>
+                    <p>Gradiente verde concentrado</p>
+                </div>
+                <div class="gradient-demo demo-4">
+                    <h3>Big Bang Attack</h3>
+                    <p>Gradiente explosivo</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">
+                Proyecto de Transferencia del Conocimiento - Propiedades Visuales en CSS
+            </p>
+            <p class="footer-subtitle">
+                Técnico en Programación de Software - SENA
+            </p>
+            <p class="footer-tech">
+                Desarrollado con: HTML5, CSS3, Gradientes, RGBA, Background Properties
+            </p>
+            <p class="footer-tech">
+                Total de personajes en la galería: 26 items visuales
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

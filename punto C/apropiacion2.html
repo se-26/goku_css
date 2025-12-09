@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apropiación 2 - Header con Imagen de Fondo</title>
+    <link rel="stylesheet" href="apropiacion2.css">
+</head>
+<body>
+    <!-- Header principal con imagen de Goku de fondo -->
+    <header class="hero-header">
+        <!-- Capa semitransparente para mejorar legibilidad -->
+        <div class="overlay"></div>
+        
+        <!-- Contenido del header -->
+        <div class="hero-content">
+            <h1>Dragon Ball Z</h1>
+            <p class="tagline">El poder de los Guerreros Saiyajin</p>
+            <p class="descripcion">
+                Experimenta la épica historia de Goku y sus amigos mientras protegen 
+                la Tierra de las amenazas más poderosas del universo.
+            </p>
+            <div class="botones">
+                <button class="btn btn-primary">Ver Ahora</button>
+                <button class="btn btn-secondary">Más Información</button>
+            </div>
+        </div>
+        
+        <!-- Indicador de scroll -->
+        <div class="scroll-indicator">
+            <span>Desliza hacia abajo</span>
+            <div class="arrow-down">↓</div>
+        </div>
+    </header>
+    
+    <!-- Sección de contenido -->
+    <main>
+        <section class="info-section">
+            <h2>Características del Diseño</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon"></div>
+                    <h3>background-size: cover</h3>
+                    <p>La imagen cubre todo el contenedor manteniendo sus proporciones. Puede recortar parte de la imagen si es necesario.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon"></div>
+                    <h3>background-position: center</h3>
+                    <p>La imagen se centra tanto horizontal como verticalmente dentro del contenedor.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon"></div>
+                    <h3>background-repeat: no-repeat</h3>
+                    <p>La imagen no se repite, aparece una sola vez en el contenedor.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon"></div>
+                    <h3>Capa RGBA semitransparente</h3>
+                    <p>Un overlay con rgba(0, 0, 0, 0.6) mejora la legibilidad del texto sobre la imagen.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Ejemplos adicionales con diferentes configuraciones -->
+        <section class="ejemplos-section">
+            <h2>Variaciones de Configuración</h2>
+            
+            <div class="ejemplo-container">
+                <div class="ejemplo ejemplo-1">
+                    <div class="ejemplo-overlay"></div>
+                    <div class="ejemplo-content">
+                        <h3>Configuración Original</h3>
+                        <code>background-size: cover;</code>
+                        <p>Imagen completa cubriendo el área</p>
+                    </div>
+                </div>
+                
+                <div class="ejemplo ejemplo-2">
+                    <div class="ejemplo-overlay"></div>
+                    <div class="ejemplo-content">
+                        <h3>Overlay Más Oscuro</h3>
+                        <code>rgba(0, 0, 0, 0.75)</code>
+                        <p>Mayor opacidad para más contraste</p>
+                    </div>
+                </div>
+                
+                <div class="ejemplo ejemplo-3">
+                    <div class="ejemplo-overlay"></div>
+                    <div class="ejemplo-content">
+                        <h3>Overlay de Color</h3>
+                        <code>rgba(231, 76, 60, 0.5)</code>
+                        <p>Overlay rojo semitransparente</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>Ejercicio 2: Apropiación de Conocimientos - Propiedades Visuales en CSS</p>
+    </footer>
+</body>
+</html>

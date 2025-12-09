@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apropiación 3 - Gradientes Temáticos</title>
+    <link rel="stylesheet" href="apropiacion3.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Gradientes Temáticos en CSS</h1>
+            <p class="subtitulo">Tres tipos de gradientes con diferentes efectos visuales</p>
+        </header>
+        
+        <main>
+            <!-- Caja 1: Gradiente Lineal Horizontal -->
+            <section class="gradiente-caja caja-1">
+                <div class="contenido">
+                    <h2>Gradiente Lineal Horizontal</h2>
+                    <div class="etiqueta">Tipo 1</div>
+                    <p class="codigo-info">
+                        <code>linear-gradient(to right, #667eea, #764ba2)</code>
+                    </p>
+                    <div class="descripcion-efecto">
+                        <h3>Efecto Visual:</h3>
+                        <ul>
+                            <li>Los colores fluyen suavemente de izquierda a derecha</li>
+                            <li> Perfecto para barras de navegación y headers</li>
+                            <li> Dirección: 0° (horizontal)</li>
+                            <li>Transición gradual entre dos colores complementarios</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Caja 2: Gradiente Lineal en Ángulo -->
+            <section class="gradiente-caja caja-2">
+                <div class="contenido">
+                    <h2>Gradiente Lineal en Ángulo</h2>
+                    <div class="etiqueta">Tipo 2</div>
+                    <p class="codigo-info">
+                        <code>linear-gradient(135deg, #f093fb, #f5576c)</code>
+                    </p>
+                    <div class="descripcion-efecto">
+                        <h3>Efecto Visual:</h3>
+                        <ul>
+                            <li> Flujo diagonal desde esquina superior izquierda</li>
+                            <li> Crea sensación de movimiento y dinamismo</li>
+                            <li>Dirección: 135° (diagonal descendente)</li>
+                            <li>Ideal para fondos de tarjetas y secciones destacadas</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Caja 3: Gradiente Radial -->
+            <section class="gradiente-caja caja-3">
+                <div class="contenido">
+                    <h2>Gradiente Radial</h2>
+                    <div class="etiqueta">Tipo 3</div>
+                    <p class="codigo-info">
+                        <code>radial-gradient(circle, #4facfe, #00f2fe)</code>
+                    </p>
+                    <div class="descripcion-efecto">
+                        <h3>Efecto Visual:</h3>
+                        <ul>
+                            <li>Los colores irradian desde el centro hacia afuera</li>
+                            <li>Crea efecto de foco o spotlight</li>
+                            <li>Forma: circular (también puede ser elíptica)</li>
+                            <li>Perfecto para botones, iconos y elementos destacados</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <!-- Sección de comparación -->
+        <section class="comparacion">
+            <h2>Comparación de Gradientes</h2>
+            <div class="comparacion-grid">
+                <div class="comparacion-item">
+                    <div class="mini-gradiente grad-horizontal"></div>
+                    <h3>Lineal Horizontal</h3>
+                    <p>Flujo uniforme → →</p>
+                </div>
+                
+                <div class="comparacion-item">
+                    <div class="mini-gradiente grad-diagonal"></div>
+                    <h3>Lineal Diagonal</h3>
+                    <p>Flujo diagonal ↘ ↘</p>
+                </div>
+                
+                <div class="comparacion-item">
+                    <div class="mini-gradiente grad-radial"></div>
+                    <h3>Radial</h3>
+                    <p>Expansión ◉ ◯</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sección de usos comunes -->
+        <section class="usos-comunes">
+            <h2>Casos de Uso Comunes</h2>
+            <div class="casos-grid">
+                <div class="caso">
+                    <div class="caso-icono"></div>
+                    <h3>Headers y Banners</h3>
+                    <p>Gradientes lineales horizontales o diagonales</p>
+                    <div class="ejemplo-caso ejemplo-header"></div>
+                </div>
+                
+                <div class="caso">
+                    <div class="caso-icono"></div>
+                    <h3>Botones Modernos</h3>
+                    <p>Gradientes lineales o radiales para profundidad</p>
+                    <div class="ejemplo-caso ejemplo-boton"></div>
+                </div>
+                
+                <div class="caso">
+                    <div class="caso-icono"></div>
+                    <h3>Tarjetas Premium</h3>
+                    <p>Gradientes diagonales para elegancia</p>
+                    <div class="ejemplo-caso ejemplo-card"></div>
+                </div>
+                
+                <div class="caso">
+                    <div class="caso-icono"></div>
+                    <h3>Fondos de Sección</h3>
+                    <p>Gradientes radiales para foco visual</p>
+                    <div class="ejemplo-caso ejemplo-fondo"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

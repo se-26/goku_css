@@ -1,0 +1,697 @@
+/*
+================================================================================
+GALERÍA VISUAL - DRAGON BALL Z
+================================================================================
+Proyecto: Aplicación de Propiedades Visuales en CSS
+Autor: [Tu Nombre]
+Descripción: Galería completa que demuestra el uso de colores, gradientes,
+             imágenes de fondo y transparencias en CSS.
+Personajes incluidos: 26 items de Dragon Ball
+================================================================================
+*/
+
+/* ===== RESET Y CONFIGURACIÓN BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Paleta de colores principal definida como variables CSS */
+    --color-saiyan: #FFD700;
+    --color-ocean: royalblue;
+    --color-namek: rgb(46, 204, 113);
+    --color-majin: rgba(155, 89, 182, 0.9);
+    --color-kame: rgb(5%, 50%, 95%);
+    
+    /* Colores de soporte */
+    --color-dark: #2c3e50;
+    --color-light: #ecf0f1;
+    --color-accent: #e74c3c;
+    
+    /* Espaciado */
+    --spacing-small: 10px;
+    --spacing-medium: 20px;
+    --spacing-large: 40px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--color-dark);
+    background-color: #f5f7fa;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-medium);
+}
+
+/* ===== HERO HEADER ===== */
+/* Sección principal con imagen de fondo */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    
+    /* PROPIEDADES DE IMAGEN DE FONDO */
+    background-image: url('../../../imagenes/assets/imagenes/ginyu_force.webp');
+    background-size: contain; /* Cubre todo el espacio */
+    background-position: center; /* Centrada */
+    background-repeat: no-repeat; /* Sin repetición */
+    background-attachment: fixed; /* Efecto parallax */
+}
+
+/* Overlay oscuro para mejorar legibilidad - USO DE RGBA */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* RGBA: Negro con 60% de opacidad para contraste */
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    padding: var(--spacing-medium);
+    max-width: 900px;
+}
+
+.hero-title {
+    font-size: 4em;
+    margin-bottom: var(--spacing-medium);
+    /* Sombra de texto para mayor legibilidad */
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+    animation: fadeInDown 1s ease;
+}
+
+.hero-subtitle {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: var(--color-saiyan);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    animation: fadeInUp 1s ease 0.3s backwards;
+}
+
+.hero-description {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+    animation: fadeInUp 1s ease 0.6s backwards;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 15px 40px;
+    background: linear-gradient(135deg, var(--color-accent), #c0392b);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1em;
+    box-shadow: 0 10px 30px rgba(231, 76, 60, 0.4);
+    transition: all 0.3s ease;
+    animation: fadeInUp 1s ease 0.9s backwards;
+}
+
+.hero-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(231, 76, 60, 0.6);
+}
+
+/* ===== NAVEGACIÓN ===== */
+/* Barra de navegación con gradiente */
+.navbar {
+    /* GRADIENTE LINEAL horizontal */
+    background: linear-gradient(to right, #667eea, #764ba2);
+    padding: var(--spacing-medium) 0;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0 var(--spacing-medium);
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    /* Transparencia en el fondo */
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-3px);
+}
+
+/* ===== SECCIÓN DE PALETA DE COLORES ===== */
+.color-palette {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.section-title {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--color-dark);
+}
+
+.section-description {
+    text-align: center;
+    font-size: 1.2em;
+    color: #7f8c8d;
+    margin-bottom: 50px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.palette-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.color-card {
+    height: 250px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    padding: 20px;
+    text-align: center;
+}
+
+.color-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Aplicación de colores usando diferentes métodos */
+
+/* Color 1: HEXADECIMAL */
+.color-saiyan {
+    background-color: #FFD700; /* Dorado en hexadecimal */
+}
+
+/* Color 2: POR NOMBRE */
+.color-ocean {
+    background-color: royalblue; /* Nombre CSS predefinido */
+}
+
+/* Color 3: RGB */
+.color-namek {
+    background-color: rgb(46, 204, 113); /* Verde en RGB */
+}
+
+/* Color 4: RGBA con transparencia */
+.color-majin {
+    background-color: rgba(155, 89, 182, 0.9); /* Púrpura con 90% opacidad */
+}
+
+/* Color 5: RGB con porcentajes */
+.color-kame {
+    background-color: rgb(5%, 50%, 95%); /* Azul en porcentajes */
+}
+
+.color-name {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+}
+
+.color-code {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-family: 'Courier New', monospace;
+    color: var(--color-dark);
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.color-method {
+    color: white;
+    font-size: 0.9em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    font-style: italic;
+}
+
+/* ===== GALERÍA PRINCIPAL ===== */
+.main-gallery {
+    padding: 80px 0;
+    /* GRADIENTE como fondo de sección */
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Items de la galería - Base */
+.gallery-item {
+    position: relative;
+    height: 350px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    
+    /* Propiedades de imagen de fondo aplicadas inline */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gallery-item:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* Overlay con diferentes colores RGBA para cada item */
+.item-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+/* Diferentes overlays con RGBA y gradientes */
+
+/* Overlay 1: Gradiente naranja */
+.overlay-1 {
+    background: linear-gradient(135deg, rgba(243, 156, 18, 0.7), rgba(230, 126, 34, 0.7));
+}
+
+/* Overlay 2: Gradiente dorado (Gohan) */
+.overlay-2 {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.75), rgba(255, 140, 0, 0.75));
+}
+
+/* Overlay 3: Gradiente rojo (Bardock) */
+.overlay-3 {
+    background: linear-gradient(135deg, rgba(192, 57, 43, 0.7), rgba(231, 76, 60, 0.7));
+}
+
+/* Overlay 4: Gradiente radial amarillo (Gotenks) */
+.overlay-4 {
+    background: radial-gradient(circle, rgba(255, 215, 0, 0.65), rgba(255, 165, 0, 0.8));
+}
+
+/* Overlay 5: Gradiente púrpura/blanco (Freezer) */
+.overlay-5 {
+    background: linear-gradient(135deg, rgba(189, 195, 199, 0.7), rgba(142, 68, 173, 0.7));
+}
+
+/* Overlay 6: Verde (Cell) */
+.overlay-6 {
+    background: linear-gradient(135deg, rgba(39, 174, 96, 0.75), rgba(26, 188, 156, 0.75));
+}
+
+/* Overlay 7: Rosa (Majin Buu) */
+.overlay-7 {
+    background: radial-gradient(circle, rgba(253, 121, 168, 0.75), rgba(232, 67, 147, 0.8));
+}
+
+/* Overlay 8: Púrpura oscuro (Beerus) */
+.overlay-8 {
+    background: radial-gradient(circle, rgba(149, 117, 205, 0.75), rgba(75, 0, 130, 0.85));
+}
+
+/* Overlay 9: Azul claro (Android 18) */
+.overlay-9 {
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.7), rgba(155, 89, 182, 0.7));
+}
+
+/* Overlay 10: Verde militar (Android 16) */
+.overlay-10 {
+    background: linear-gradient(135deg, rgba(39, 174, 96, 0.7), rgba(22, 160, 133, 0.75));
+}
+
+/* Overlay 11: Rojo intenso (Android 19) */
+.overlay-11 {
+    background: linear-gradient(135deg, rgba(192, 57, 43, 0.75), rgba(211, 84, 0, 0.75));
+}
+
+/* Overlay 12: Gris oscuro (Dr. Gero) */
+.overlay-12 {
+    background: linear-gradient(135deg, rgba(44, 62, 80, 0.75), rgba(52, 73, 94, 0.75));
+}
+
+/* Overlay 13: Azul metálico (Android 13) */
+.overlay-13 {
+    background: linear-gradient(135deg, rgba(52, 73, 94, 0.7), rgba(44, 62, 80, 0.8));
+}
+
+/* Overlay 14: Púrpura vibrante (Ginyu) */
+.overlay-14 {
+    background: radial-gradient(circle, rgba(155, 89, 182, 0.75), rgba(142, 68, 173, 0.8));
+}
+
+/* Overlay 15: Rosa intenso (Dodoria) */
+.overlay-15 {
+    background: linear-gradient(135deg, rgba(253, 121, 168, 0.7), rgba(255, 89, 149, 0.75));
+}
+
+/* Overlay 16: Amarillo mágico (Babidi) */
+.overlay-16 {
+    background: radial-gradient(circle, rgba(241, 196, 15, 0.75), rgba(243, 156, 18, 0.8));
+}
+
+/* Overlay 17: Verde brillante (Dende Super Hero) */
+.overlay-17 {
+    background: linear-gradient(135deg, rgba(46, 204, 113, 0.75), rgba(39, 174, 96, 0.75));
+}
+
+/* Overlay 18: Verde suave (Dende) */
+.overlay-18 {
+    background: linear-gradient(135deg, rgba(26, 188, 156, 0.7), rgba(22, 160, 133, 0.75));
+}
+
+/* Overlay 19: Azul vibrante (Bulma) */
+.overlay-19 {
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.7), rgba(41, 128, 185, 0.75));
+}
+
+/* Overlay 20: Rosa suave (Chi-Chi) */
+.overlay-20 {
+    background: linear-gradient(135deg, rgba(232, 67, 147, 0.65), rgba(255, 118, 117, 0.7));
+}
+
+/* Overlay 21: Naranja cálido (Yamcha) */
+.overlay-21 {
+    background: linear-gradient(135deg, rgba(230, 126, 34, 0.7), rgba(211, 84, 0, 0.75));
+}
+
+/* Overlay 22: Dorado místico (Gran Kaio Sama) */
+.overlay-22 {
+    background: radial-gradient(circle, rgba(241, 196, 15, 0.7), rgba(243, 156, 18, 0.8));
+}
+
+/* Overlay 23: Púrpura velocidad (Dyspo) */
+.overlay-23 {
+    background: linear-gradient(135deg, rgba(155, 89, 182, 0.75), rgba(142, 68, 173, 0.8));
+}
+
+/* Overlay 24: Dorado especial (Dokkan 14) */
+.overlay-24 {
+    background: radial-gradient(circle, rgba(255, 215, 0, 0.7), rgba(255, 193, 7, 0.8));
+}
+
+/* Overlay 25: Dorado brillante (Dokkan 15) */
+.overlay-25 {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.75), rgba(255, 193, 7, 0.75));
+}
+
+/* Overlay 26: Verde natural (Android 17) */
+.overlay-26 {
+    background: linear-gradient(135deg, rgba(39, 174, 96, 0.7), rgba(46, 204, 113, 0.7));
+}
+
+/* Efecto hover en overlay */
+.gallery-item:hover .item-overlay {
+    opacity: 0.85;
+}
+
+/* Contenido del item */
+.item-content {
+    position: relative;
+    z-index: 2;
+    padding: 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.item-content h3 {
+    color: white;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.item-content p {
+    color: white;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.item-tag {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.25);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 0.85em;
+    backdrop-filter: blur(5px);
+    width: fit-content;
+}
+
+/* ===== SECCIÓN DE GRADIENTES DEMOSTRATIVOS ===== */
+.gradients-showcase {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.gradients-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.gradient-demo {
+    height: 200px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    padding: 20px;
+    text-align: center;
+}
+
+.gradient-demo:hover {
+    transform: scale(1.05);
+}
+
+.gradient-demo h3 {
+    color: white;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.gradient-demo p {
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Diferentes gradientes demostrativos */
+
+/* Demo 1: Gradiente lineal azul */
+.demo-1 {
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+}
+
+/* Demo 2: Gradiente lineal amarillo */
+.demo-2 {
+    background: linear-gradient(135deg, #f7b733, #fc4a1a);
+}
+
+/* Demo 3: Gradiente radial verde */
+.demo-3 {
+    background: radial-gradient(circle, #11998e, #38ef7d);
+}
+
+/* Demo 4: Gradiente múltiple */
+.demo-4 {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    /* GRADIENTE oscuro */
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.footer-text {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.footer-subtitle {
+    font-size: 1em;
+    opacity: 0.9;
+    margin-bottom: 15px;
+}
+
+.footer-tech {
+    font-size: 0.9em;
+    opacity: 0.7;
+    margin: 5px 0;
+}
+
+/* ===== ANIMACIONES ===== */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5em;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.3em;
+    }
+    
+    .nav-container {
+        gap: 10px;
+    }
+    
+    .palette-grid,
+    .gallery-grid,
+    .gradients-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-title {
+        font-size: 2em;
+    }
+    
+    .gallery-item {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2em;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1em;
+    }
+    
+    .item-content h3 {
+        font-size: 1.5em;
+    }
+    
+    .item-content p {
+        font-size: 1em;
+    }
+}
+
+/*
+================================================================================
+RESUMEN DE TÉCNICAS CSS APLICADAS:
+================================================================================
+
+1. COLORES:
+   ✓ Hexadecimal (#FFD700)
+   ✓ Nombres CSS (royalblue)
+   ✓ RGB (rgb(46, 204, 113))
+   ✓ RGBA con transparencia (rgba(155, 89, 182, 0.9))
+   ✓ RGB con porcentajes (rgb(5%, 50%, 95%))
+
+2. GRADIENTES:
+   ✓ Linear-gradient horizontal (to right)
+   ✓ Linear-gradient diagonal (135deg)
+   ✓ Radial-gradient circular (circle)
+   ✓ Gradientes múltiples con varios stops
+   ✓ 26 overlays únicos con diferentes efectos
+
+3. IMÁGENES DE FONDO:
+   ✓ background-image: url()
+   ✓ background-size: cover
+   ✓ background-position: center
+   ✓ background-repeat: no-repeat
+   ✓ background-attachment: fixed (parallax)
+   ✓ 26 imágenes diferentes de personajes
+
+4. TRANSPARENCIAS:
+   ✓ Overlays con rgba()
+   ✓ backdrop-filter: blur()
+   ✓ Opacidad en hover
+   ✓ Diferentes niveles de transparencia
+
+5. BUENAS PRÁCTICAS:
+   ✓ Variables CSS (:root)
+   ✓ Comentarios descriptivos
+   ✓ Código organizado por secciones
+   ✓ Diseño responsive
+   ✓ Accesibilidad (contraste)
+   ✓ Transiciones suaves
+   
+TOTAL DE ITEMS: 26 personajes de Dragon Ball con técnicas CSS únicas
+================================================================================
+*/

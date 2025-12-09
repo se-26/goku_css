@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+.color-palette {
+    display: flex; /* Permite que las cajas se muestren en fila */
+    justify-content: center; /* Centra las cajas en la pantalla */
+    gap: 20px; /* Espacio entre las cajas */
+    padding: 20px;
+}
+
+.color-box {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center; /* Centra el texto verticalmente */
+    justify-content: center; /* Centra el texto horizontalmente */
+    color: rgb(255, 255, 255); /* Color de texto para contraste */
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.color-box:hover {
+    transform: scale(1.05); /* Efecto visual al pasar el ratón */
+}
+
+/* 1. Color Hexadecimal */
+.box-hex {
+    background-color: #3498DB; /* Azul - Ejemplo de valor hexadecimal */
+}
+
+/* 2. Color por Nombre */
+.box-name {
+    background-color: LightCoral; /* Coral claro - Ejemplo de color por nombre */
+}
+
+/* 3. Color con rgb() */
+.box-rgb {
+    background-color: rgb(46, 204, 113); /* Verde esmeralda - Ejemplo de rgb */
+}
+
+/* 4. Color con rgba() */
+.box-rgba {
+    /* Morado con 70% de opacidad (el 0.7 al final) */
+    background-color: rgba(155, 89, 182, 0.7); /* Ejemplo de rgba */
+    color: #333; /* Cambiar a color oscuro para mayor contraste con la opacidad */
+}
+
+/* 5. Color mezclando porcentajes dentro de rgb() */
+.box-mixed-rgb {
+    /* 80% de Rojo, 20% de Verde, 0% de Azul = Naranja-Rojo */
+    background-color: rgb(80%, 20%, 0%); /* Ejemplo de rgb con porcentajes */
+}
