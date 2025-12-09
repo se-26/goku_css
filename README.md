@@ -82,12 +82,12 @@ Este proyecto es una **galería visual interactiva** que demuestra el dominio co
 
 1. Clona este repositorio:
 ```bash
-git clone  https://github.com/se-26/goku.git
+git clone  https://github.com/se-26/goku_css.git
 ```
 
 2. Navega a la carpeta del proyecto:
 ```bash
-cd galeria-visual-transferencia
+cd propiedades_css
 ```
 
 3. Asegúrate de tener todas las imágenes en la carpeta raíz:
@@ -122,7 +122,7 @@ cd galeria-visual-transferencia
 
 ### Opción 2: Ver en GitHub Pages
 
- **URL del proyecto:** [ https://github.com/se-26/goku.git]( https://github.com/se-26/goku.git)
+ **URL del proyecto:** [https://se-26.github.io/goku_css/]( https://se-26.github.io/goku_css/)
 
 ##  Estructura del Proyecto
 
@@ -161,8 +161,6 @@ galeria-visual-transferencia/
 ├── 14Dokkan.webp
 └── 15Dokkan.webp
 ```
-
-##  Decisiones de Diseño
 
 ### Paleta de Colores
 
@@ -209,22 +207,6 @@ Cada uno de los 26 personajes tiene un overlay único diseñado específicamente
         rgba(230, 126, 34, 0.7)
     );
 }
-```
-
-### 3. Imágenes Inline con Background
-```css
-<article class="gallery-item" 
-    style="background-image: url('goku_normal.webp');">
-```
-
-### 4. Efecto Parallax
-```css
-background-attachment: fixed;
-```
-
-### 5. Transiciones Suaves
-```css
-transition: all 0.3s ease;
 ```
 
 ##  Objetivos de Aprendizaje Alcanzados
@@ -316,7 +298,7 @@ Este proyecto fue creado con fines educativos como parte del programa de formaci
 
 ---
 
-**Fecha de entrega:** [8/12/2025]  
+**Fecha de entrega:** [9/12/2025]  
 **Programa:** Técnico en Programación de Software  
 **Centro:** CIMI - SENA  
 **Fase del Proyecto:** Ejecución  
