@@ -64,7 +64,7 @@ body {
     overflow: hidden;
     
     /* PROPIEDADES DE IMAGEN DE FONDO */
-    background-image: url('../../../imagenes/assets/imagenes/ginyu_force.webp');
+    background-image: url('imagenes/assets/imagenes/ginyu_force.webp');
     background-size: contain; /* Cubre todo el espacio */
     background-position: center; /* Centrada */
     background-repeat: no-repeat; /* Sin repetición */
